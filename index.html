@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button id="button">Click Me</button>
+    Create a simple web page with a button that says "Click me!"
+
+Each time the button is clicked, update a number on the page that shows how many times it’s been clicked.
+    <script>
+        const button = document.getElementById("button");
+        let div = document.createElement("div");
+        document.body.appendChild(div)
+        let timesClicked = 0;
+        let count = document.createElement("span");
+        div.appendChild(count);
+        button.addEventListener("click", countClick = (e) => {
+            if(button === e.target){
+                timesClicked ++;
+                count.textContent = timesClicked;
+                
+            }
+
+        })
+    </script> -->
+
+
+    <!-- Create a button that says "Show Text". -->
+     <button id="btd">Show Message</button>
+     <p id="para"></p>
+
+     <!-- Create a function called getWeatherForecast that returns a Promise. -->
+    <script>
+        let para = document.getElementById("para");
+        let forecast = "sunny"
+        const getWeatherForecast = () => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if(forecast === "sunny") {
+                        resolve(`Sunny with a chance of tacos 🌮`)
+                    } else {
+                        reject(`Unable to fetch weather. Try again later.`)
+                    }
+                })
+            })
+        }
+    </script>
+
+
+
+
+
+
+
+
+<!-- SetTimeOut promise to simulate loading user data -->
+
+    <!-- <script>
+        let para = document.getElementById("para");
+        const userData = true;
+        const loadUserData = () => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if(userData) {
+                        resolve(`User data loaded successfully`)
+                    } else {
+                        reject(`Failed to load user data`)
+                    }
+                }, 2000)
+            })
+        }
+        loadUserData().then((resolve) => {
+            para.innerText = resolve
+        })
+        .catch((reject) => {
+            para.innerText = reject
+        })
+    </script> -->
+
+
+
+
+
+
+
+     <!--  User log in promise practixwe -->
+     <!-- <script>
+        let para = document.getElementById("para");
+        let isLoggedIn = true;
+        const logInStatus = () => {
+            return new Promise((resolve, reject) => {
+                if(isLoggedIn) {
+                    resolve(`User is logged in`)
+                } else {
+                    reject(`User is not logged in`)
+                }
+            })
+        }
+        logInStatus()
+        .then((resolve) =>{
+            para.innerText += resolve
+        })
+        .catch((error) => {
+            para.innerText += error
+        })
+     </script>
+     -->
+
+
+
+
+        <!-- button changes bg color
+         const button = document.getElementById("btd");
+         button.addEventListener("click", () => {
+             document.body.style.backgroundColor = "red";
+             if (document.body.style.backgroundColor === "red") {
+                 setTimeout(() => {
+                    document.body.style.backgroundColor = "blue"
+               }, 2000)
+            }
+         }) -->
+    <!-- <script>    
+        const delayedGreeting = (name) => {
+            return new Promise((resolve, reject) => {
+                
+                setTimeout(()=>{
+                    if(name) {
+                        resolve(`Hello ${name}`);
+                    } else {
+                        reject(`Name is required`);
+                    }
+                },7000)
+            })
+        }
+        delayedGreeting()
+        .then((greet) => {
+            console.log(greet);
+            
+
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+
+        
+    </script> -->
+
+
+
+     <!-- <script>
+        const fetchId = (id) => {
+            return new Promise((resolve, reject) => {
+                if(id % 2 === 0) {
+                    resolve(`Data for id: ${id} fetched successfully!`);
+                } else {
+                    reject(`Failed to fetch data for id: ${id}`);
+                }
+            })
+        }
+        fetchId(5)
+        .then((result) => {
+            console.log(result)
+        })
+        .catch((error) => {
+            console.log(error);
+        } )
+     </script> -->
+     <!-- <script>
+        const positiveNegative = (num) => {
+            return new Promise((resolve, reject) => {
+                if(num > 0) {
+                    resolve(`${num} is postive`)
+                } else {
+                    reject(`${num} is negative`)
+                }
+            })
+        } 
+        positiveNegative(50)
+        .then((message) => {
+            console.log(message);
+        })
+        .catch((error) => {
+            console.log(error);
+        })
+    
+     </script> -->
+   
+     <!-- <script>
+        const button = document.getElementById("btd");
+        const para = document.getElementById("para");
+        button.addEventListener("click", () => {
+            setTimeout(() => {
+                para.innerText += "Hello!"
+            }, 2000)
+        })
+     </script> -->
+     <!-- <script>
+        const button = document.getElementById("text")
+        button.addEventListener("click", ()=> {
+            if(button.innerText === "Show Text") {
+                button.innerText = "";
+            }else {
+                button.innerText = "Show Text"
+            }
+
+        })
+     </script> -->
+</body>
+</html>
